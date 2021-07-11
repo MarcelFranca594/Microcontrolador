@@ -1,0 +1,191 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B-02C temperaturaLM35
+02D-02E temperaturaReferencia
+02F-030 ultimaTemperatura
+031-032 PID
+033-034 erro
+035-036 proporcional
+037-038 integrativo
+039-03A derivativo
+03B-03C kp
+03D-03E ki
+03F-040 kd
+041-042 passos
+043     @TRIS_C
+044     @PSTRINGCN7_638.P1
+044-045 @PRINTF_LD_9600_62_63.P2
+044-045 @PRINTF_LD_638.P3
+044     lcd_ini.conta
+044-047 @SFTOI.P1
+044     MAIN.@SCRATCH1
+045     lcd_ini.@SCRATCH1
+045     MAIN.@SCRATCH2
+045     @PSTRINGCN7_638.@SCRATCH1
+046-047 @ITOF.P1
+046-047 @MULS1616.P2
+046-049 @MULFF.P3
+046     MAIN.@SCRATCH3
+046     @PSTRINGCN7_638.@SCRATCH2
+046     @PRINTF_LD_638.@SCRATCH1
+046     @PRINTF_LD_9600_62_63.@SCRATCH1
+047     MAIN.@SCRATCH4
+047     @PSTRINGCN7_638.@SCRATCH3
+047     @PRINTF_LD_638.@SCRATCH2
+047     @PRINTF_LD_9600_62_63.@SCRATCH2
+048-04B @ADDFF.P1
+048-049 @MULS1616.P2
+048     @PSTRINGCN7_638.@SCRATCH4
+048     @PRINTF_LD_638.@SCRATCH3
+048     @PRINTF_LD_9600_62_63.@SCRATCH3
+049     @PRINTF_LD_638.@SCRATCH4
+049     @PRINTF_LD_9600_62_63.@SCRATCH4
+04A-04D @MULFF.P1
+04A     @MULS1616.@SCRATCH1
+04A     @PRINTF_LD_638.@SCRATCH5
+04A     @PRINTF_LD_9600_62_63.@SCRATCH5
+04B     @MULS1616.@SCRATCH2
+04B     @PRINTF_LD_638.@SCRATCH6
+04B     @PRINTF_LD_9600_62_63.@SCRATCH6
+04C-04F @ADDFF.P1
+04C     @PRINTF_LD_638.@SCRATCH7
+04C     @PRINTF_LD_9600_62_63.@SCRATCH7
+04D     lcd_escreve.c
+04E     @delay_ms1.P1
+04E     lcd_pos_xy.x
+04E     @MULFF.@SCRATCH1
+04F     lcd_pos_xy.y
+04F     @MULFF.@SCRATCH2
+050     lcd_pos_xy.endereco
+050     @MULFF.@SCRATCH3
+050     @ADDFF.@SCRATCH1
+051     lcd_pos_xy.@SCRATCH1
+051     @MULFF.@SCRATCH4
+051     @ADDFF.@SCRATCH2
+052     lcd_envia_byte.endereco
+052     @MULFF.@SCRATCH5
+052     @ADDFF.@SCRATCH3
+053     lcd_envia_byte.dado
+053     @ADDFF.@SCRATCH4
+054     lcd_envia_byte.@SCRATCH1
+054     @ADDFF.@SCRATCH5
+055     lcd_envia_nibble.dado
+055     @ADDFF.@SCRATCH6
+056     @ADDFF.@SCRATCH7
+057     @ADDFF.@SCRATCH8
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+00004F  INI_LCD.call
+000053  INI_LCD.data
+000057  RTCC_isr
+000080  @const674.call
+000092  @delay_ms1
+0000A6  lcd_envia_nibble
+0000CD  lcd_envia_byte
+0000EE  lcd_ini
+00012B  @ITOF
+00014A  @MULFF
+0001C1  @ADDFF
+000304  @SFTOI
+000325  @MULS1616
+000353  lcd_escreve
+00036D  lcd_pos_xy
+00038A  @PSTRINGCN7_638
+0003E1  @PRINTF_LD_638
+000461  @PRINTF_LD_9600_62_63
+0004D7  MAIN
+0004D7  @cinit1
+000505  @cinit2
+
+Project Directory:
+    C:\Users\marcel\Dropbox\My PC (DESKTOP-KKDLKML)\Documents\Projeto de Micro\controle_de_temperatura_malha_fechada\
+
+Project Files:
+    controle_de_temperatura_malha_fechada.c                 [10-jul-21 16:38  CRC=13B4D5D3]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [18-abr-14 16:56  CRC=4F277C97]
+    ..\Driver\mod_lcd.c                                     [21-mai-21 11:47  CRC=178A4A02]
+
+Source signature=91F0E66E
+
+Units:
+    controle_de_temperatura_malha_fechada (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   controle_de_temperatura_malha_fechada.xsym
+    Errors:      controle_de_temperatura_malha_fechada.err
+    Ext Symbols: controle_de_temperatura_malha_fechada.esym
+    INHX8:       controle_de_temperatura_malha_fechada.hex
+    Symbols:     controle_de_temperatura_malha_fechada.sym
+    List:        controle_de_temperatura_malha_fechada.lst
+    Debug/COFF:  controle_de_temperatura_malha_fechada.cof
+    Project:     controle_de_temperatura_malha_fechada.ccspjt
+    Call Tree:   controle_de_temperatura_malha_fechada.tre
+    Statistics:  controle_de_temperatura_malha_fechada.STA
